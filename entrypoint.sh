@@ -2,6 +2,7 @@
 set -e
 
 # 既存の server.pid を削除
+# 要変更：myapp → プロジェクト名
 rm -f /myapp/tmp/pids/server.pid
 
 # コンテナのプロセス実行
