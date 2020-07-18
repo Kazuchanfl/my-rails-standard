@@ -1,5 +1,5 @@
 # ベース・イメージ
-FROM ruby:2.5
+FROM ruby:2.6
 
 # 依存ライブラリの用意
 RUN apt-get update -qq && apt-get install -y nodejs yarn
