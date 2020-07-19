@@ -39,6 +39,19 @@ docker-compose build
 docker-compose run app rake db:create
 ```
 
-[localhost:3000](localhost:3000)で動く
+[localhost:3000](http://localhost:3000)で動く
+
+4. 手動で Rails new する（今後修正予定）
+
+4.1. コンテナに入る
+```bash
+docker-compose run app bash
+```
+
+4.2. rails newする
+```bash
+bundle exec rails new .
+```
+- 全ての質問に `n` を入力
 
 ## [WIP]アプリ名の変更方法
