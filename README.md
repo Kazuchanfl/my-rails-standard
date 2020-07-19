@@ -36,7 +36,7 @@ bundle exec rails new .
 ## [WIP]アプリ名の変更方法
 
 ## 運用方法
-git-flow に準拠
+[git-flow](https://tracpath.com/bootcamp/learning_git_git_flow.html) に準拠
 
 1. development ブランチ最新化
 2. development ブランチから relase ブランチ作成
