@@ -26,7 +26,7 @@ Things you may want to cover:
 ## 起動方法
 1. このリポジトリをクローン
 ```bash
-git clone git@github.com:Kazuchanfl/my-rails-standard.git
+git clone git@github.com:Kazuchanfl/my-rails-standard.git -b feature/quickstart
 ```
 
 2. コンテナをビルド
