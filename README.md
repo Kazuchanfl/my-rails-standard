@@ -1,27 +1,6 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Rails開発環境標準化
+Rails 開発に用いるボイラープレートを管理する。
+これにより、Rails開発への迅速な着手を実現する。
 
 ## 起動方法
 1. このリポジトリをクローン
@@ -66,11 +45,8 @@ git-flow に準拠
 5. master ブランチを development ブランチにマージ
 
 ※ 3でmasterへマージ後に緊急で修正を加える場合、
+
 6. master ブランチから hotfix ブランチ作成
 7. hotfix ブランチを master ブランチにマージ
 8. masterブランチにバージョンをタグづけ（x.x.1 のように）
 9. master ブランチを development ブランチにマージ
-
-docker-compose run app rake db:create、
-docker-compose run app rake db:create緊急で
-docker-compose run app rake db:create
