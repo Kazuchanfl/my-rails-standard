@@ -1,8 +1,8 @@
 # ベース・イメージ
-FROM ruby:2.6
+FROM ruby:2.5
 
 # 依存ライブラリの用意
-RUN apt-get update -qq && apt-get install -y nodejs yarn
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 
 # プロジェクト名（要変更：my_app → プロジェクト名）
 ENV PROJECT_NAME my_app
