@@ -10,16 +10,17 @@ services:
             - .:/my_app
         ports:
             - "3000:3000"
-        depends_on: 
+        links: 
             - db
     db:
         # 要変更: my_app_db → DB名
         container_name: "my_app_db"
         image: mysql:8.0
         environment:
-            MYSQL_DATABASE: my_app_db
+            # もしアプリ名を変更していれば要変更
+            MYSQL_DATABASE: my_app_development
             MYSQL_ROOT_USER: root
             MYSQL_ROOT_PASSWORD: password
         ports:
             - "3306:3306"
-        command: mysqld --character-set-server=utf8
+        command: bash -c "--default-authentication-plugin=mysql_native_password && mysqld --character-set-server=utf8"
