@@ -3,11 +3,14 @@ services:
     db:
         # 要変更: my_app_db → DB名
         container_name: "my_app_db"
-        image: postgres
+        image: mysql:8.0
         environment:
-            POSTGRES_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: password
+        ports: 
+            - "3306:3306"
+        command: --default-authentication-plugin=mysql_native_password
         volumes: 
-            - ./tmp/db:/var/lib/postgresql/data
+            - mysql-data:/var/lib/mysql
     app:
         # 要変更: my_app → コンテナ名
         container_name: "my_app"
@@ -20,3 +23,6 @@ services:
             - "3000:3000"
         depends_on: 
             - db
+volumes:
+    mysql-data:
+        driver: local
