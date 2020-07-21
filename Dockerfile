@@ -2,9 +2,8 @@
 FROM ruby:2.5
 
 # 依存ライブラリの用意
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update -qq && apt-get install -y nodejs
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
 # プロジェクト名（要変更：my_app → プロジェクト名）
 ENV PROJECT_NAME my_app
