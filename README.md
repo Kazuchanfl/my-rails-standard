@@ -18,16 +18,23 @@ docker-compose build
 docker-compose run app rake db:create
 ```
 
+4. マイグレーション
+```bash
+docker exec -it my_app bash
+
+bundle exec rails db:migrate RAILS_ENV=development
+```
+
 [localhost:3000](http://localhost:3000)で動く
 
-4. 手動で Rails new する（今後修正予定）
+5. 手動で Rails new する（今後修正予定）
 
-4.1. コンテナに入る
+5.1. コンテナに入る
 ```bash
 docker-compose run app bash
 ```
 
-4.2. rails newする
+5.2. rails newする
 ```bash
 bundle exec rails new .
 ```
