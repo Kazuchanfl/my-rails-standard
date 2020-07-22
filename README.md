@@ -5,7 +5,7 @@ Rails 開発に用いるボイラープレートを管理する。
 ## 起動方法
 1. このリポジトリをクローン
 ```bash
-git clone git@github.com:Kazuchanfl/my-rails-standard.git -b feature/quickstart
+git clone git@github.com:Kazuchanfl/my-rails-standard.git
 ```
 
 2. コンテナをビルド
