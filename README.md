@@ -5,7 +5,7 @@ Rails 開発に用いるボイラープレートを管理する。
 ## 起動方法
 1. このリポジトリをクローン
 ```bash
-git clone git@github.com:Kazuchanfl/my-rails-standard.git -b feature/quickstart
+git clone git@github.com:Kazuchanfl/my-rails-standard.git
 ```
 
 2. コンテナをビルド
@@ -13,28 +13,38 @@ git clone git@github.com:Kazuchanfl/my-rails-standard.git -b feature/quickstart
 docker-compose build
 ```
 
-3. DB作成
-```bash
-docker-compose run app rake db:create
+3. コンテナを再起動
+```
+docker-compose restart
 ```
 
-4. マイグレーション
-```bash
+4. コンテナに入る
+```
 docker exec -it my_app bash
+```
 
+以下はコンテナ内で
+
+5. DB作成
+```bash
+bundle exec rake db:create
+```
+
+6. マイグレーション
+```bash
 bundle exec rails db:migrate RAILS_ENV=development
 ```
 
 [localhost:3000](http://localhost:3000)で動く
 
-5. 手動で Rails new する（今後修正予定）
+7. 手動で Rails new する（今後修正予定）
 
-5.1. コンテナに入る
+7.1. コンテナに入る
 ```bash
 docker-compose run app bash
 ```
 
-5.2. rails newする
+7.2. rails newする
 ```bash
 bundle exec rails new .
 ```
