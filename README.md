@@ -13,28 +13,33 @@ git clone git@github.com:Kazuchanfl/my-rails-standard.git -b feature/quickstart
 docker-compose build
 ```
 
-3. DB作成
-```bash
-docker-compose run app rake db:create
+3. コンテナに入る
+```
+docker exec -it my_app bash
 ```
 
-4. マイグレーション
-```bash
-docker exec -it my_app bash
+以下はコンテナ内で
 
+4. DB作成
+```bash
+bundle exec rake db:create
+```
+
+5. マイグレーション
+```bash
 bundle exec rails db:migrate RAILS_ENV=development
 ```
 
 [localhost:3000](http://localhost:3000)で動く
 
-5. 手動で Rails new する（今後修正予定）
+6. 手動で Rails new する（今後修正予定）
 
-5.1. コンテナに入る
+6.1. コンテナに入る
 ```bash
 docker-compose run app bash
 ```
 
-5.2. rails newする
+6.2. rails newする
 ```bash
 bundle exec rails new .
 ```
